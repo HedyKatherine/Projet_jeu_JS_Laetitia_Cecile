@@ -1,0 +1,39 @@
+/* Fondu de visible à invisible.*/
+@-webkit-keyframes fadeOutSlow {
+  0%, 80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+@keyframes fadeOutSlow {
+  0%, 80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Fondu de visible à invisible.*/
+@-webkit-keyframes fadeOutQuick {
+0%, 50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes fadeOutQuick {
+0%, 50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Fondu de invisible à visible rapide. */
+@-webkit-keyframes fadeInQuick {
+  0%, 80% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes fadeInQuick {
+  0%, 80% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Fondu de invisible à visible lent. */
+@-webkit-keyframes fadeInSlow {
+  0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes fadeInSlow {
+  0% { opacity: 0; }
+    100% { opacity: 1; }
+}

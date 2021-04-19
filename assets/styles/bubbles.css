@@ -1,0 +1,97 @@
+/* -- CHARACTER 1 -- */
+
+#ego_1 {
+    background-image: url('../img/bubbles/egomaniac_1.svg');
+}
+
+#aso_1 {
+    background-image: url('../img/bubbles/asocial_1.svg');
+}
+
+#hos_1 {
+    background-image: url('../img/bubbles/hostile_1.svg');
+}
+
+#brat_1 {
+    background-image: url('../img/bubbles/brat_1.svg');
+}
+
+#crazy_1 {
+    background-image: url('../img/bubbles/crazy_1.svg');
+}
+
+#love_1 {
+    background-image: url('../img/bubbles/love_1.svg');
+}
+
+#smart_1 {
+    background-image: url('../img/bubbles/smart_1.svg');
+}
+
+#friend_1 {
+    background-image: url('../img/bubbles/friend_1.svg');
+}
+
+#bold_1 {
+    background-image: url('../img/bubbles/bold_1.svg');
+}
+
+#calm_1 {
+    background-image: url('../img/bubbles/calm_1.svg');
+}
+
+/* -- CHARACTER 2 -- */
+
+#ego_2 {
+    background-image: url('../img/bubbles/egomaniac_2.svg');
+}
+
+#aso_2 {
+    background-image: url('../img/bubbles/asocial_2.svg');
+}
+
+#hos_2 {
+    background-image: url('../img/bubbles/hostile_2.svg');
+}
+
+#brat_2 {
+    background-image: url('../img/bubbles/brat_2.svg');
+}
+
+#crazy_2 {
+    background-image: url('../img/bubbles/crazy_2.svg');
+}
+
+#love_2 {
+    background-image: url('../img/bubbles/love_2.svg');
+}
+
+#smart_2 {
+    background-image: url('../img/bubbles/smart_2.svg');
+}
+
+#friend_2 {
+    background-image: url('../img/bubbles/friend_2.svg');
+}
+
+#bold_2 {
+    background-image: url('../img/bubbles/bold_2.svg');
+}
+
+#calm_2 {
+    background-image: url('../img/bubbles/calm_2.svg');
+}
+
+/* -- WINNER -- */
+
+#win_char1 {
+    background-image: url('../img/bubbles/win_1.svg');
+}
+
+#win_char2 {
+    background-image: url('../img/bubbles/win_2.svg');
+}
+
+#win_charboth {
+    background-image: url('../img/bubbles/win_both.svg');
+}

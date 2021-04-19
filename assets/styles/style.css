@@ -1,0 +1,193 @@
+/*TURQUOISE #2084a0 pour le texte*/
+/* Bulles des messages. */
+@import 'bubbles.css';
+
+/* Réglages des animations. */
+@import 'animations.css';
+
+@font-face {
+	font-family: 'bubble_bobbleregular';
+	src: url('../font/bubble_bobble-webfont.woff2') format('woff2'), url('../font/bubble_bobble-webfont.woff') format('woff');
+}
+@font-face {
+	font-family: 'fluo_gumsregular';
+	src: url('../font/fluo_gums-webfont.woff2') format('woff2'), url('../font/fluo_gums-webfont.woff') format('woff');
+}
+@font-face {
+	font-family: 'ghost_smileysregular';
+	src: url('../font/ghostsmileys-webfont.woff2') format('woff2'), url('../font/ghostsmileys-webfont.woff') format('woff');
+}
+@font-face {
+	font-family: 'commodore_64_angledregular';
+	src: url('../font/commodore_angled_v1.2-webfont.woff2') format('woff2'), url('../font/commodore_angled_v1.2-webfont.woff') format('woff');
+}
+@font-face {
+	font-family: 'twenty-sevenregular';
+	src: url('../font/20seven-webfont.woff2') format('woff2'), url('../font/20seven-webfont.woff') format('woff');
+}
+body, h1, h2, img {
+	margin: 0;
+	bottom: 0;
+}
+img {
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+}
+#divPlayground {
+	display: none;
+}
+h1 {
+	font-family: 'fluo_gumsregular';
+	text-transform: uppercase;
+	color: #2084a0;
+}
+h2 {
+	font-family: 'commodore_64_angledregular';
+	color: #de55fa;
+}
+#consignes {
+	font-family: 'commodore_64_angledregular';
+	color: #41b3b9;
+}
+.ghost {
+	font-family: 'ghost_smileysregular';
+	text-align: center;
+	font-size: 25em;
+	color: #2084a0;
+	/* Pour créer un contour aux personnages. */
+	text-shadow: -1px 0 black, 0 1px black,
+    			1px 0 black, 0 -1px black
+}
+.colorOfText {
+	font-family: 'twenty-sevenregular';
+	text-align: center;
+	font-size: 1.5em;
+	color: #ae5805;
+	margin-bottom: 0.5em;
+	/* Pour créer un contour au texte. */
+	text-shadow: -1px 0 black, 0 1px black,
+    			1px 0 black, 0 -1px black
+}
+#char1_message p, #char2_message p, #win_message p,
+#win_char1 p, #win_char2 p, #win_charboth {
+	background-size: cover;
+	position: absolute;
+	top: 3rem;
+	left: 43vw;
+	width: 14vw;
+	height: 14vw;
+	text-align: center;
+	padding: 5vw 0;
+	color: white;
+    -webkit-animation: fadeOutSlow 2s;
+    animation: fadeOutSlow 2s;
+    opacity: 0;
+	font-family: 'twenty-sevenregular';
+	text-align: center;
+	font-size: 1.7em;
+}
+#win_conclusion p {
+	background-image: url('../img/bubbles/match_result.svg');
+	position: absolute;
+	top: 20rem;
+	left: 45vw;
+	width: 10vw;
+	height: 10vw;
+	line-height: 2vw;
+	text-align: center;
+	padding: 4vw 0;
+	color: white;
+    -webkit-animation: fadeOutQuick 10s;
+    animation: fadeOutQuick 10s;
+    opacity: 0;
+	font-family: 'twenty-sevenregular';
+	text-align: center;
+	font-size: 1.7em;
+}
+#checkscores {
+	display: none;
+	position: absolute;
+	top: 20rem;
+	width: 10vw;
+	left: 45vw;
+}
+#reloadbtn, #checkscores{
+	display: none;
+	position: absolute;
+	top: 20rem;
+	left: 45vw;
+	text-align: center;
+	font-size: 1.75em;
+	background: #28005f;
+	color: #41b3b9;
+	font-family: 'twenty-sevenregular';
+	border: 3px solid #41b3b9;
+	cursor: pointer;
+	border-radius: 200px;
+	padding: 3vh;
+	cursor: pointer;
+	transition: 1.75s;
+    -webkit-animation: fadeInQuick 2s;
+    animation: fadeInQuick 2s;
+
+}
+#reloadbtn:hover, #checkscores:hover {
+	color: #2a1f77;
+	box-shadow: 0 5px 50px 0 #41b3b9 inset, 0 5px 50px 0 #dd8cd9, 0 5px 50px 0 #41b3b9 inset, 0 5px 50px 0 #dd8cd9;
+	text-shadow: 0 0 5px #dd8cd9, 0 0 5px #dd8cd9;
+}
+.hidePlayground {
+    -webkit-animation: fadeOutSlow 2s;
+    animation: fadeOutSlow 2s;
+    opacity: 0;
+}
+.showPlayground {
+    -webkit-animation: fadeInSlow 2s;
+    animation: fadeInSlow 2s;
+    opacity: 1;
+}
+#playGround {
+	padding: 0;
+	background-color: none;
+}
+.buttonStyle {
+	position: relative;
+	text-align: center;
+	padding: 5px;
+	font-size: 11px;
+	background: #040605;
+	color: #41b3b9;
+	font-family: 'commodore_64_angledregular';
+	border: 2px solid #41b3b9;
+	cursor: pointer;
+	padding: 0.5vw;
+	border-radius: 80px;
+	transition: 1.5s;
+}
+.buttonStyle:hover {
+	color: #040605;
+	box-shadow: 0 5px 50px 0 #41b3b9 inset, 0 5px 50px 0 #41b3b9, 0 5px 50px 0 #41b3b9 inset, 0 5px 50px 0 #41b3b9;
+	text-shadow: 0 0 5px #41b3b9, 0 0 5px #41b3b9;
+}
+#buttonStyle2{
+	position: relative;
+	text-align: center;
+	padding: 5px;
+	font-size: 1.75em;
+	background: #28005f;
+	color: #41b3b9;
+	font-family: 'twenty-sevenregular';
+	text-emphasis: uppercase;
+	border: 3px solid #41b3b9;
+	cursor: pointer;
+	border-radius: 200px;
+	padding: 3vh;
+	cursor: pointer;
+  transition: 1.75s;
+}
+#buttonStyle2:hover {
+	color: #2a1f77;
+	box-shadow: 0 5px 50px 0 #41b3b9 inset, 0 5px 50px 0 #dd8cd9, 0 5px 50px 0 #41b3b9 inset, 0 5px 50px 0 #dd8cd9;
+	text-shadow: 0 0 5px #dd8cd9, 0 0 5px #dd8cd9;
+}

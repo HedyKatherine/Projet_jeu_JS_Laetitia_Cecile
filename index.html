@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aliens</title>
+  <link rel="icon" href="assets/img/icon.svg" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+
+<body>
+  <div class="container-fluid col-12" id="home" style="height: 100vh;">
+    <img src="assets/img/hd-3816045_1280.jpg" alt="image d'une lune synthétique se reflétant sur une piste de jeu">
+    <div class="row p-3 justify-content-center" style="height: 15vh;">
+      <h1 class="col-12 text-center align-self-end">aliens </h1>
+    </div>
+    <div class="row p-3 justify-content-center" style="height: 50vh;">
+      <h2 class="col-12 text-center align-self-end">aliens </h2>
+      <p id="consignes" class="col-12 text-center align-self-end">
+        Leela et Leelo veulent tous les deux participer à la prochaine aventure intergalactique de leurs cousins.<br>
+        Mais il ne reste de la place que pour un seul dans le vaisseau... Comment choisir&nbsp;?<br>
+        Ils ont une idée&nbsp;: laisser une tierce personne décider leurs traits de caractères qui vont faire la différence et ainsi désigner qui va gagner sa place.</p>
+    </div>
+    <div class="row text-center justify-content-center" style="height: 20vh;">
+      <button class="align-self-center" type="button" name="button" id="buttonStyle2" onclick="displpayPagesGame()">COMMENCER UNE PARTIE</button>
+    </div>
+  </div>
+  <div class="container-fluid" id="divPlayground" style="height: 100vh">
+    <img src="assets/img/planetarium-5721152_1920.jpg" alt="image du décor du fond du jeu représentant un paysage spatial avec un soleil en arrière plan">
+    <div class="row justify-content-center showPlayground" id="playGround" style="height: 100vh;">
+      <div class="col-6 row" style="height: 90vh;">
+        <p class="col-12 ghost" id="char1">W</p>
+        <div class="row col-12 justify-content-center colorOfText">
+          <p class="offset-1 col-10 text-justify">
+            Moi, c'est Leela.<br>
+            Je suis d'un naturel optimiste, altruiste et intuitif.</p>
+          <p class="col-12 text-center">Il faut me choisir parce que je suis surtout<br><span id="char1_good_choice">_____</span> et <span id="char1_bad_choice">_____</span>&nbsp;!</p>
+        </div>
+        <div class="row col-12" style="height: 10vh;">
+          <div class="col-12 text-center choicebtn" id="char1_good_buttons">
+            <button class="buttonStyle" onclick="char1_qual_good(1);">égocentrique</button>
+            <button class="buttonStyle" onclick="char1_qual_good(2);">asociale</button>
+            <button class="buttonStyle" onclick="char1_qual_good(3);">agressive</button>
+            <button class="buttonStyle" onclick="char1_qual_good(4);">capricieuse</button>
+            <button class="buttonStyle" onclick="char1_qual_good(5);">cinglée</button>
+          </div>
+          <div class="col-10 text-center mt-2 choicebtn" id="char1_bad_buttons">
+            <button class="buttonStyle" onclick="char1_qual_bad(1);">romantique</button>
+            <button class="buttonStyle" onclick="char1_qual_bad(2);">cérébrale</button>
+            <button class="buttonStyle" onclick="char1_qual_bad(3);">familière</button>
+            <button class="buttonStyle" onclick="char1_qual_bad(4);">intrépide</button>
+            <button class="buttonStyle" onclick="char1_qual_bad(5);">pacifique</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 row" style="height: 90vh;">
+        <p class="col-12 ghost" id="char2">U</p>
+        <div class="row col-12 justify-content-center colorOfText">
+          <p class="offset-1 col-10 text-justify">
+            Moi, c'est Leelo.<br>
+            Je suis d'un naturel adorable, souriant et assuré.</p>
+          <p class="col-12 text-center">Il faut me choisir parce que je suis surtout<br><span id="char2_good_choice">_____</span> et <span id="char2_bad_choice">_____</span>&nbsp;!</p>
+        </div>
+        <div class="row col-12" style="height: 10vh;">
+          <div class="col-12 text-center choicebtn" id="char2_good_buttons">
+            <button class="buttonStyle" onclick="char2_qual_good(1);">égocentrique</button>
+            <button class="buttonStyle" onclick="char2_qual_good(2);">asocial</button>
+            <button class="buttonStyle" onclick="char2_qual_good(3);">agressif</button>
+            <button class="buttonStyle" onclick="char2_qual_good(4);">capricieux</button>
+            <button class="buttonStyle" onclick="char2_qual_good(5);">cinglé</button>
+          </div>
+          <div class="offset-2 col-10 text-center mt-2 choicebtn" id="char2_bad_buttons">
+            <button class="buttonStyle" onclick="char2_qual_bad(1);">romantique</button>
+            <button class="buttonStyle" onclick="char2_qual_bad(2);">cérébral</button>
+            <button class="buttonStyle" onclick="char2_qual_bad(3);">familier</button>
+            <button class="buttonStyle" onclick="char2_qual_bad(4);">intrépide</button>
+            <button class="buttonStyle" onclick="char2_qual_bad(5);">pacifique</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="char1_message"></div>
+    <div id="char2_message"></div>
+    <div class="row text-center justify-content-center" style="height: 20vh;">
+      <button class="align-self-center text-center" type="button" name="button" onclick="match();" id="checkscores">POW!</button>
+    </div>
+    <div id="win_message"></div>
+    <div id="win_conclusion"></div>
+    <button id="reloadbtn" onclick="window.location.reload();" disabled>RELOAD</button>
+  </div>
+</body>
+
+<script src="assets/js/script.js"></script>
+
+</html>
